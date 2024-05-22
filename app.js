@@ -2,7 +2,6 @@ let listaDeNumerosSorteados = [];
 let numeroLimite = 10;
 let numeroSecreto = gerarNumeroAleatorio();
 let trys = 1;
-let palavraTry = trys <= 1 ? "tentativa" : "tentativas";
 
 function exibirTextoNaTela(tag, texto){
     let campo = document.querySelector(tag,texto);
@@ -18,6 +17,7 @@ console.log(numeroSecreto);
 function verificarChute() {
     let chute = document.querySelector("input").value;
     if (chute == numeroSecreto){
+        let palavraTry = trys <= 1 ? "tentativa" : "tentativas";
         let mensagemtrys = `você descobriu o número secreto com ${trys} ${palavraTry}!`;
     exibirTextoNaTela("h1", "Acertou!");
     exibirTextoNaTela("p", mensagemtrys);
